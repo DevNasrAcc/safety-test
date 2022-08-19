@@ -1,0 +1,306 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: MontserratBlack;
+  src: url(./assets/fonts/Montserrat\ Black\ 900.ttf);
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url(./assets/fonts/Montserrat\ Bold\ 700.ttf);
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(./assets/fonts/Montserrat\ SemiBold\ 600.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(./assets/fonts/Montserrat\ Medium\ 500.ttf);
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(./assets/fonts/Montserrat\ Regular\ 400.ttf);
+}
+
+.sidedrawer {
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  max-width: 100px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.sidedrawer.open {
+  transform: translateX(0);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: none;
+  height: 15px;
+  width: 20px;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  z-index: 0;
+  position: relative;
+}
+
+input[type="date"]:after {
+  content: "";
+  background-image: url(./assets/images/calender-input.svg);
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  z-index: -1;
+  position: absolute;
+  right: 12.5px;
+  cursor: pointer;
+}
+
+.expandedSideDrawer {
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  max-width: 320px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.expandedSideDrawer.open {
+  transform: translateX(0);
+}
+
+.fusioncharts-div {
+  margin-left: 10px !important;
+}
+
+.arrow_box {
+  position: relative;
+  background-color: rgba(97, 97, 97, 0.92);
+  border-radius: 4px;
+  color: #fff;
+  left: 0px;
+}
+
+.apexchart_box {
+  position: relative;
+  background-color: rgba(97, 97, 97, 0.92);
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  padding: 6px;
+  text-align: left;
+}
+
+.arrow_box h2, .apexchart_box h2 {
+  font-family: Montserrat !important;
+  font-weight: 500 !important;
+  font-size: 10px !important;
+  line-height: 15px !important;
+  color: #ffffff !important;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid rgba(97, 97, 97, 0.92) !important;
+  background-color: rgba(97, 97, 97, 0.92) !important;
+}
+
+.apexcharts-tooltip {
+  box-shadow: none !important;
+  border-radius: 4px !important;
+}
+
+.fushionChart, .fsChart, .chartInModal, .chartByDay  {
+  height: 260px;
+}
+
+.chartJs, .pnChartJS {
+  height: 245px;
+  width: 100%;
+}
+
+.chartJs canvas, .pnChartJS canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.chartByDay {
+  padding-bottom: 20px;
+}
+
+.pnChart {
+  height: 260px;
+}
+
+.fushionChart > .fusioncharts-container > svg > :nth-child(4), 
+.chartByDay > .fusioncharts-container > svg > :nth-child(4),
+.fsChart>.fusioncharts-container>svg> :nth-child(4),
+.pnChart>.fusioncharts-container>svg> :nth-child(4) {
+  display: none !important;
+}
+
+.chartInModal >.fusioncharts-container>svg> :nth-child(5) {
+  display: none !important;
+}
+
+.fushionChart>.fusioncharts-container>svg> :nth-child(3) > :nth-child(5) > path,
+.chartByDay>.fusioncharts-container>svg> :nth-child(3)> :nth-child(5)>path,
+.fsChart>.fusioncharts-container>svg> :nth-child(3)> :nth-child(5)>path,
+.pnChart>.fusioncharts-container>svg> :nth-child(3)> :nth-child(5)>path {
+  display: none;
+}
+
+.fushionChart>.fusioncharts-container>svg> :nth-child(3)> :nth-child(12),
+.chartByDay>.fusioncharts-container>svg> :nth-child(3)> :nth-child(12),
+.fsChart>.fusioncharts-container>svg> :nth-child(3)> :nth-child(12),
+.pnChart>.fusioncharts-container>svg> :nth-child(3)> :nth-child(12) {
+  display: none !important;
+}
+
+.inModal .fusioncharts-container svg :nth-child(4) {
+  display: none !important;
+}
+
+.inModal .fusioncharts-container svg :nth-child(3) :nth-child(12) {
+  display: none !important;
+}
+
+.insideMod {
+  height: 250px;
+}
+
+.insideMod canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+@media only screen and (max-width: 1830px) {
+  .fushionChart,
+  .fsChart {
+    height: 225px;
+  }
+
+  .pnChart {
+    height: 225px;
+  }
+
+  .chartJs, .pnChartJS {
+    height: 225px;
+  }
+}
+
+@media only screen and (max-width: 1730px) {
+  .chartJs,
+  .pnChartJS {
+    height: 215px;
+  }
+
+  .fushionChart, .pnChart {
+    height: 205px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .fushionChart, .fsChart {
+    height: 190px;
+  }
+
+  .pnChart {
+    height: 190px;
+  }
+
+  .chartJs,
+  .pnChartJS {
+    height: 190px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .fushionChart, .fsChart {
+    height: 200px;
+  }
+
+  .pnChart {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .fushionChart, .fsChart {
+    height: 160px;
+  }
+
+  .pnChart {
+    height: 160px;
+  }
+
+  .chartJs,
+  .pnChartJS {
+    height: 160px;
+  }
+
+  input[type="date"]:after {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .fushionChart,
+  .fsChart {
+    height: 150px;
+  }
+
+  .pnChart {
+    height: 150px;
+  }
+
+  .chartJs,
+  .pnChartJS {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .chartJs,
+  .pnChartJS {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+
+.fushionChart,
+.fsChart {
+    height: 180px;
+  }
+
+  .pnChart {
+    height: 215px;
+  }
+}
